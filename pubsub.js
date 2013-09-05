@@ -24,7 +24,7 @@
             publish:function(channel, args){
                 var c=(this.cache[channel]!==undefined)?this.cache[channel]:[];
                 for(var i=0;i<c.length;i++){
-                    c[i].cb.apply(c[i].context, args || []);
+                    c[i].cb.apply(c[i].c, args || []);
                 }
 
             }
